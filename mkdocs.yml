@@ -3,8 +3,27 @@ site_description: Convert audio dialogue into animated scene events
 site_author: Talk2Scene Team
 
 theme:
-  name: readthedocs
-  custom_dir: docs/templates
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
 
 plugins:
   - search
@@ -19,19 +38,33 @@ plugins:
         - locale: zh
           name: 中文
           build: true
+          site_name: Talk2Scene
+          site_description: 将音频对话转换为动画场景事件
+          nav_translations:
+            Home: 首页
+            Installation: 安装
+            CLI Usage: CLI 使用
+            Configuration: 配置
+            Redis Streaming: Redis 流式传输
+            JSONL Schema: JSONL 格式
+            Frontend: 前端查看器
+            Assets: 素材资源
+            Scene Renderer: 场景渲染器
+            Evaluation: 评估
+            Whitelist: 白名单
 
 nav:
-  - "🎤 Home": index.md
-  - "🔧 Installation": installation.md
-  - "⌨️ CLI Usage": cli-usage.md
-  - "⚙️ Configuration": configuration.md
-  - "📡 Redis Streaming": redis-streaming.md
-  - "📄 JSONL Schema": jsonl-schema.md
-  - "🖥️ Frontend": frontend.md
-  - "🎨 Assets": assets.md
-  - "🖼️ Scene Renderer": renderer.md
-  - "🧪 Evaluation": evaluation.md
-  - "📋 Whitelist": whitelist.md
+  - Home: index.md
+  - Installation: installation.md
+  - CLI Usage: cli-usage.md
+  - Configuration: configuration.md
+  - Redis Streaming: redis-streaming.md
+  - JSONL Schema: jsonl-schema.md
+  - Frontend: frontend.md
+  - Assets: assets.md
+  - Scene Renderer: renderer.md
+  - Evaluation: evaluation.md
+  - Whitelist: whitelist.md
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -40,14 +73,17 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - admonition
+  - pymdownx.details
   - toc:
       permalink: true
-  - meta
+  - attr_list
+  - md_in_html
   - tables
-
-extra_css:
-  - custom.css
