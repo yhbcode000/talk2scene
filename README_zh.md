@@ -49,12 +49,8 @@ flowchart LR
 ### 示例视频
 
 <p align="center">
-  <video src="https://github.com/yhbcode000/talk2scene/raw/main/evaluation/expected/example_video.webm" width="600" controls>
-    您的浏览器不支持视频标签。
-  </video>
+  <img src="evaluation/expected/example_output.gif" width="600" alt="示例输出视频">
 </p>
-
-> 如果视频无法内联播放，[点此下载](evaluation/expected/example_video.webm)。
 
 ### 渲染场景
 

@@ -49,12 +49,8 @@ flowchart LR
 ### Example Video
 
 <p align="center">
-  <video src="https://github.com/yhbcode000/talk2scene/raw/main/evaluation/expected/example_video.webm" width="600" controls>
-    Your browser does not support the video tag.
-  </video>
+  <img src="evaluation/expected/example_output.gif" width="600" alt="Example output video">
 </p>
-
-> If the video doesn't play inline, [click here to download](evaluation/expected/example_video.webm).
 
 ### Rendered Scenes
 
