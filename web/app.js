@@ -88,7 +88,7 @@ class Talk2SceneViewer {
             this._updateInfo();
 
             if (this.events.length > 0) {
-                this._renderEvent(this.events[0]);
+                this.startRealtime();
             }
         };
         reader.readAsText(file);
@@ -252,11 +252,10 @@ class Talk2SceneViewer {
                     const src = `${this.assetBase}/${layer}/${code}.png`;
                     if (!el.src.endsWith(src)) {
                         el.src = src;
-                        el.style.opacity = '1';
                     }
+                    el.style.opacity = '1';
                 } else {
                     el.style.opacity = '0';
-                    el.removeAttribute('src');
                 }
             }
         }

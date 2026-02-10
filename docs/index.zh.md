@@ -45,15 +45,15 @@ flowchart LR
 ### 示例视频
 
 <p align="center">
-  <img src="../evaluation/expected/example_output.gif" width="600" alt="示例输出视频">
+  <img src="images/example_output.gif" width="600" alt="示例输出视频">
 </p>
 
 ### 渲染场景
 
 <p align="center">
-  <img src="../evaluation/expected/basic_scene.png" width="280" alt="基础场景 — 实验室 + 正面站立 + 中性表情">
-  <img src="../evaluation/expected/cafe_thinking.png" width="280" alt="咖啡厅场景 — 咖啡厅 + 正面站立 + 思考">
-  <img src="../evaluation/expected/cg_pandora.png" width="280" alt="CG 模式 — 潘多拉科技">
+  <img src="images/basic_scene.png" width="280" alt="基础场景 — 实验室 + 正面站立 + 中性表情">
+  <img src="images/cafe_thinking.png" width="280" alt="咖啡厅场景 — 咖啡厅 + 正面站立 + 思考">
+  <img src="images/cg_pandora.png" width="280" alt="CG 模式 — 潘多拉科技">
 </p>
 
 <p align="center">
@@ -66,11 +66,11 @@ flowchart LR
 
 | 图层 | 示例 | 编码 | 说明 |
 |:----:|:----:|------|------|
-| 🌅 **BG** | <img src="../assets/bg/BG_Lab_Modern.png" width="120"> | `BG_Lab_Modern` | 背景（不透明） |
-| 🧍 **STA** | <img src="../assets/sta/STA_Stand_Front.png" width="120"> | `STA_Stand_Front` | 姿态（透明） |
-| 🎭 **EXP** | <img src="../assets/exp/EXP_Smile_EyesClosed.png" width="120"> | `EXP_Smile_EyesClosed` | 表情叠加（透明） |
-| 🤚 **ACT** | <img src="../assets/act/ACT_WaveGreeting.png" width="120"> | `ACT_WaveGreeting` | 动作叠加（透明） |
-| ✨ **CG** | <img src="../assets/cg/CG_PandorasTech.png" width="120"> | `CG_PandorasTech` | 全场景插画（替换所有图层） |
+| 🌅 **BG** | <img src="images/assets/BG_Lab_Modern.png" width="120"> | `BG_Lab_Modern` | 背景（不透明） |
+| 🧍 **STA** | <img src="images/assets/STA_Stand_Front.png" width="120"> | `STA_Stand_Front` | 姿态（透明） |
+| 🎭 **EXP** | <img src="images/assets/EXP_Smile_EyesClosed.png" width="120"> | `EXP_Smile_EyesClosed` | 表情叠加（透明） |
+| 🤚 **ACT** | <img src="images/assets/ACT_WaveGreeting.png" width="120"> | `ACT_WaveGreeting` | 动作叠加（透明） |
+| ✨ **CG** | <img src="images/assets/CG_PandorasTech.png" width="120"> | `CG_PandorasTech` | 全场景插画（替换所有图层） |
 
 ## 📦 安装
 

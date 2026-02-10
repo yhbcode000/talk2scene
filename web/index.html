@@ -129,8 +129,8 @@
 
     <div class="controls">
         <input type="file" id="jsonl-input" accept=".jsonl,.json">
-        <button class="btn-primary" id="btn-replay">Replay</button>
-        <button class="btn-secondary" id="btn-realtime">Realtime</button>
+        <button class="btn-secondary" id="btn-replay">Replay</button>
+        <button class="btn-primary" id="btn-realtime">Realtime</button>
         <button class="btn-secondary" id="btn-pause">Pause</button>
         <button class="btn-secondary" id="btn-stop">Stop</button>
         <label>Speed: <input type="range" id="speed" min="0.25" max="4" step="0.25" value="1"> <span id="speed-val">1x</span></label>
@@ -139,11 +139,11 @@
     </div>
 
     <div id="scene-container">
-        <img id="layer-bg" class="layer-bg" alt="BG">
-        <img id="layer-sta" class="layer-sta" alt="STA">
-        <img id="layer-act" class="layer-act" alt="ACT">
-        <img id="layer-exp" class="layer-exp" alt="EXP">
-        <img id="layer-cg" class="layer-cg" alt="CG">
+        <img id="layer-bg" class="layer-bg" alt="BG" style="opacity:0">
+        <img id="layer-sta" class="layer-sta" alt="STA" style="opacity:0">
+        <img id="layer-act" class="layer-act" alt="ACT" style="opacity:0">
+        <img id="layer-exp" class="layer-exp" alt="EXP" style="opacity:0">
+        <img id="layer-cg" class="layer-cg" alt="CG" style="opacity:0">
         <div id="subtitle"></div>
     </div>
 
