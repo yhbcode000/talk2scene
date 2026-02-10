@@ -1,8 +1,8 @@
-# 评估框架
+# :test_tube: 评估框架
 
 评估框架**独立于单元测试**。它通过渲染场景并与标准 PNG 比较来进行视觉回归测试。
 
-## 结构
+## :file_folder: 结构
 
 ```
 evaluation/
@@ -12,25 +12,29 @@ evaluation/
 └── diffs/      # 失败时的差异图片
 ```
 
-## 运行评估
+## :rocket: 运行评估
 
 ```bash
 uv run talk2scene eval.run=true
 ```
 
-## 工作原理
+## :mag: 工作原理
 
-1. 对于 `evaluation/cases/` 中的每个 `.json` 用例：
-   - 渲染场景为 PNG
-   - 与 `evaluation/expected/` 中的期望 PNG 比较
-   - 如果差异超过容差，写入差异图片
-2. 生成 JSON 报告和文本摘要
+```mermaid
+flowchart TD
+    A[evaluation/cases/*.json] --> B[渲染场景为 PNG]
+    B --> C{与期望 PNG\n比较}
+    C -->|在容差内| D[通过]
+    C -->|超过容差| E[写入差异图片]
+    D --> F[JSON 报告\n+ 文本摘要]
+    E --> F
+```
 
-## 测试 vs 评估
+## :vs: 测试 vs 评估
 
 | | tests/ | evaluation/ |
 |---|--------|-------------|
-| 类型 | 单元测试 | 视觉回归 |
-| 工具 | pytest | 内置运行器 |
-| 检查 | 逻辑正确性 | 渲染正确性 |
-| 产物 | - | PNG 渲染 + 差异图 |
+| :label: 类型 | 单元测试 | 视觉回归 |
+| :hammer_and_wrench: 工具 | pytest | 内置运行器 |
+| :white_check_mark: 检查 | 逻辑正确性 | 渲染正确性 |
+| :package: 产物 | - | PNG 渲染 + 差异图 |

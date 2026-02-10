@@ -1,14 +1,14 @@
-# Installation
+# :wrench: Installation
 
-## Prerequisites
+## :clipboard: Prerequisites
 
-- Python 3.11+
-- [uv](https://docs.astral.sh/uv/) package manager
-- FFmpeg (for audio processing)
-- Redis (for streaming mode)
-- Node.js (optional, for frontend development)
+- :snake: Python 3.11+
+- :package: [uv](https://docs.astral.sh/uv/) package manager
+- :film_projector: FFmpeg (for audio processing)
+- :satellite: Redis (for streaming mode)
+- :globe_with_meridians: Node.js (optional, for frontend development)
 
-## Install with uv
+## :inbox_tray: Install with uv
 
 ```bash
 # Clone the repository
@@ -25,7 +25,7 @@ uv sync --extra dev
 uv sync --extra docs
 ```
 
-## Redis Setup
+## :satellite: Redis Setup
 
 ```bash
 # Install Redis
@@ -38,7 +38,7 @@ sudo systemctl start redis
 redis-cli ping
 ```
 
-## FFmpeg Setup
+## :film_projector: FFmpeg Setup
 
 ```bash
 # Ubuntu/Debian
@@ -48,7 +48,7 @@ sudo apt install ffmpeg
 ffmpeg -version
 ```
 
-## Verify Installation
+## :white_check_mark: Verify Installation
 
 ```bash
 uv run talk2scene --help

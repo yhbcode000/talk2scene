@@ -1,24 +1,10 @@
 site_name: Talk2Scene
 site_description: Convert audio dialogue into animated scene events
+site_author: Talk2Scene Team
+
 theme:
-  name: material
-  palette:
-    - scheme: default
-      primary: red
-      accent: red
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: red
-      accent: red
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - content.code.copy
+  name: readthedocs
+  custom_dir: docs/templates
 
 plugins:
   - search
@@ -35,22 +21,38 @@ plugins:
           build: true
 
 nav:
-  - Home: index.md
-  - Installation: installation.md
-  - CLI Usage: cli-usage.md
-  - Configuration: configuration.md
-  - Redis Streaming: redis-streaming.md
-  - JSONL Schema: jsonl-schema.md
-  - Frontend: frontend.md
-  - Assets: assets.md
-  - Scene Renderer: renderer.md
-  - Evaluation: evaluation.md
-  - Whitelist: whitelist.md
+  - ":microphone: Home": index.md
+  - ":wrench: Installation": installation.md
+  - ":keyboard: CLI Usage": cli-usage.md
+  - ":gear: Configuration": configuration.md
+  - ":satellite: Redis Streaming": redis-streaming.md
+  - ":page_facing_up: JSONL Schema": jsonl-schema.md
+  - ":desktop_computer: Frontend": frontend.md
+  - ":art: Assets": assets.md
+  - ":framed_picture: Scene Renderer": renderer.md
+  - ":test_tube: Evaluation": evaluation.md
+  - ":clipboard: Whitelist": whitelist.md
 
 markdown_extensions:
-  - tables
-  - admonition
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      options:
+        image_path: https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/
+  - admonition
+  - toc:
+      permalink: true
+  - meta
+  - tables
+
+extra_css:
+  - custom.css

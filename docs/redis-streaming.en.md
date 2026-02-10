@@ -1,17 +1,27 @@
-# Redis Audio Streaming
+# :satellite: Redis Audio Streaming
 
 Talk2Scene consumes from two Redis Streams for realtime processing: a pre-transcribed **STT stream** and a raw **mic stream**. When both are available, STT messages take priority (Whisper is skipped).
 
-## Dual-Stream Architecture
+## :arrows_counterclockwise: Dual-Stream Architecture
+
+```mermaid
+flowchart LR
+    STT["stream:stt\nPre-transcribed text"] -->|higher priority| XR[XREADGROUP]
+    MIC["stream:mic\nRaw PCM audio"] --> XR
+    XR --> W{Source?}
+    W -->|STT| D[Use text directly]
+    W -->|Mic| WH[Rolling Window\n+ Whisper] --> D
+    D --> SG[Scene Generation]
+```
 
 | Stream | Key | Content | Processing |
 |--------|-----|---------|------------|
-| STT | `stream:stt` | Pre-transcribed text from an external STT service | Bypass Whisper, use text directly |
-| Mic | `stream:mic` | Raw PCM audio bytes | Rolling window + Whisper transcription |
+| :speech_balloon: STT | `stream:stt` | Pre-transcribed text from an external STT service | Bypass Whisper, use text directly |
+| :studio_microphone: Mic | `stream:mic` | Raw PCM audio bytes | Rolling window + Whisper transcription |
 
 Both streams are read in a single `XREADGROUP` call. STT stream is listed first so its messages are yielded before mic messages within the same batch.
 
-## Stream Formats
+## :page_facing_up: Stream Formats
 
 ### stream:stt
 
@@ -39,7 +49,7 @@ Published by an audio I/O node (e.g. `orchestrator/nodes/standard_audio_io.py`):
 | `format` | string | `"int16"` |
 | `timestamp` | float | Unix timestamp |
 
-## Publishing Examples
+## :outbox_tray: Publishing Examples
 
 ```python
 import redis, time, json
@@ -59,7 +69,7 @@ r.xadd("stream:stt", {
 r.xadd("stream:mic", {"audio": audio_bytes})
 ```
 
-## Consumer Groups
+## :busts_in_silhouette: Consumer Groups
 
 Talk2Scene creates a consumer group on **both** streams:
 
@@ -67,11 +77,11 @@ Talk2Scene creates a consumer group on **both** streams:
 - Messages are acknowledged after processing
 - Backpressure control via `backpressure_max` (checked on both streams using `XPENDING`)
 
-## Rolling Window
+## :timer_clock: Rolling Window
 
 When processing mic audio, transcription uses a rolling window (default 30s) to maintain context across chunks. STT messages bypass this entirely since the text is already transcribed.
 
-## Configuration
+## :wrench: Configuration
 
 ```yaml
 # conf/stream/default.yaml

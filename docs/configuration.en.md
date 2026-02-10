@@ -1,19 +1,19 @@
-# Configuration
+# :gear: Configuration
 
 Talk2Scene uses [Hydra](https://hydra.cc/) for hierarchical configuration.
 
-## Config Groups
+## :file_folder: Config Groups
 
 | Group | File | Description |
 |-------|------|-------------|
-| model | `conf/model/default.yaml` | Whisper and LLM settings |
-| stream | `conf/stream/default.yaml` | Redis stream settings |
-| render | `conf/render/default.yaml` | Canvas, render, and video settings |
-| assets | `conf/assets/default.yaml` | Asset paths and z-order |
-| character | `conf/character/default.yaml` | Character defaults and transitions |
-| io | `conf/io/default.yaml` | Input/output paths and formats |
+| :brain: model | `conf/model/default.yaml` | Whisper and LLM settings |
+| :satellite: stream | `conf/stream/default.yaml` | Redis stream settings |
+| :framed_picture: render | `conf/render/default.yaml` | Canvas, render, and video settings |
+| :art: assets | `conf/assets/default.yaml` | Asset paths and z-order |
+| :bust_in_silhouette: character | `conf/character/default.yaml` | Character defaults and transitions |
+| :open_file_folder: io | `conf/io/default.yaml` | Input/output paths and formats |
 
-## LLM Settings
+## :robot: LLM Settings
 
 Default model is `gpt-4o` with JSON mode enabled (`response_format: json_object`). This guarantees valid JSON output from the scene generator.
 
@@ -28,7 +28,7 @@ Override the model via CLI:
 uv run talk2scene mode=text io.input.text_file=input/transcript.jsonl model.llm.model=gpt-4o-mini
 ```
 
-## Stream Settings
+## :satellite: Stream Settings
 
 | Setting | Default | Description |
 |---------|---------|-------------|
@@ -40,7 +40,7 @@ uv run talk2scene mode=text io.input.text_file=input/transcript.jsonl model.llm.
 | `stream.redis.batch_size` | `10` | Max messages per read |
 | `stream.redis.backpressure_max` | `100` | Max pending messages before pausing |
 
-## Render Settings
+## :framed_picture: Render Settings
 
 | Setting | Default | Description |
 |---------|---------|-------------|
@@ -54,7 +54,7 @@ uv run talk2scene mode=text io.input.text_file=input/transcript.jsonl model.llm.
 | `render.video.subtitle_font_size` | `32` | Subtitle font size in pixels |
 | `render.video.preview` | `true` | Open video after rendering |
 
-## CLI Overrides
+## :keyboard: CLI Overrides
 
 Hydra supports dot-notation overrides:
 
@@ -62,6 +62,6 @@ Hydra supports dot-notation overrides:
 uv run talk2scene model.whisper.model_size=medium stream.redis.host=myhost
 ```
 
-## Environment Variables
+## :key: Environment Variables
 
 - `OPENAI_API_KEY`: Required for LLM scene generation

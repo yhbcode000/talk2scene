@@ -24,24 +24,24 @@ Manually composing visual scenes for dialogue-driven content is tedious and erro
 
 ## 🏗️ Architecture
 
-```
-Audio / Transcript
-        │
-   Transcription (Whisper / OpenAI API)
-        │
-   Scene Generation (LLM)
-        │
-   JSONL Events ──➤ Browser Viewer (web/)
-        │               Static PNG Render
-        │               Video Export (ffmpeg)
-        ▼
-   Session Output
+```mermaid
+flowchart LR
+    A[Audio] --> B[Transcription\nWhisper / OpenAI API]
+    T[Text JSONL] --> C
+    B --> C[Scene Generation\nLLM]
+    C --> D[JSONL Events]
+    D --> E[Browser Viewer]
+    D --> F[Static PNG Render]
+    D --> G[Video Export\nffmpeg]
 ```
 
 Scenes are composed from **five layer types** stacked bottom-up:
 
-> **BG** → **STA** → **ACT** → **EXP**
->
+```mermaid
+flowchart LR
+    BG --> STA --> ACT --> EXP
+```
+
 > A **CG** illustration, when active, replaces the entire layered scene.
 
 ## 📦 Install
@@ -99,24 +99,7 @@ uv run talk2scene mode=stream
 
 ## 📚 Documentation
 
-Full documentation is available in `docs/` (English & 中文). Serve locally:
-
-```bash
-uv sync --extra docs && uv run mkdocs serve
-```
-
-| | Topic | Description |
-|---|-------|-------------|
-| 🔧 | Installation | Prerequisites and setup |
-| ⌨️ | CLI Usage | All modes and overrides |
-| ⚙️ | Configuration | Hydra config groups |
-| 📡 | Redis Streaming | Real-time dual-stream setup |
-| 📄 | JSONL Schema | Event types and format |
-| 🖥️ | Frontend | Browser viewer and playback |
-| 🎨 | Assets | Layer assets and placeholder generator |
-| 🖼️ | Scene Renderer | Composition and rendering |
-| ✅ | Evaluation | Visual regression testing |
-| 📋 | Whitelist | Valid component codes |
+Full documentation (English & 中文) is available at **[discover304.top/talk2scene](https://discover304.top/talk2scene)**.
 
 ## 📬 Contact
 

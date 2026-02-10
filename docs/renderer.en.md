@@ -1,18 +1,24 @@
-# Scene Renderer
+# :framed_picture: Scene Renderer
 
 The scene renderer composes asset layers into a single PNG deterministically.
 
-## Layering
+## :layer_cake: Layering
 
 Normal mode (`CG_None`): layers are composited bottom-to-top:
 
-```
-BG -> STA -> ACT -> EXP
+```mermaid
+flowchart LR
+    BG --> STA --> ACT --> EXP
 ```
 
 CG mode (any CG other than `CG_None`): the CG illustration replaces the entire scene — BG, STA, ACT, and EXP are all hidden.
 
-## API
+```mermaid
+flowchart LR
+    CG["CG (replaces all layers)"]
+```
+
+## :electric_plug: API
 
 ```python
 from talk2scene.renderer import render_scene
@@ -29,17 +35,17 @@ image = render_scene(scene_state, asset_dirs, canvas_size=(1024, 1024))
 image.save("output.png")
 ```
 
-## CLI
+## :keyboard: CLI
 
 ```bash
 uv run talk2scene render.scene=true render.scene_file=scene.json
 ```
 
-## Video Rendering
+## :clapper: Video Rendering
 
 Video mode renders scene events into a video file with optional burned-in subtitles.
 
-### Parallel Rendering
+### :zap: Parallel Rendering
 
 Instead of rendering every frame sequentially (e.g. 750 frames for a 25s video at 30fps), the video pipeline renders only one image per scene in parallel using `multiprocessing.Pool`, then uses ffmpeg's **concat demuxer** with per-scene durations to produce the final video. This is significantly faster since the number of unique scene images is typically much smaller than the total frame count.
 
@@ -57,7 +63,7 @@ uv run talk2scene mode=video session_id=my_session render.video.subtitle=false
 uv run talk2scene mode=video session_id=my_session render.video.preview=false
 ```
 
-### Video Configuration
+### :gear: Video Configuration
 
 | Setting | Default | Description |
 |---------|---------|-------------|
@@ -68,7 +74,7 @@ uv run talk2scene mode=video session_id=my_session render.video.preview=false
 | `render.video.subtitle_font_size` | `32` | Subtitle font size in pixels |
 | `render.video.preview` | `true` | Open video after rendering (`xdg-open`) |
 
-## Live Front-Page Rendering
+## :tv: Live Front-Page Rendering
 
 In streaming mode, Talk2Scene can render the current scene to `front_page.png` after each batch of scene events. Enable with:
 
@@ -79,6 +85,6 @@ render:
 
 This is useful for displaying a live preview in a web frontend or dashboard.
 
-## Determinism
+## :lock: Determinism
 
 Rendering is deterministic: the same inputs always produce the same output PNG. This is critical for the evaluation framework.

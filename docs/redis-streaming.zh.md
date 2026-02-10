@@ -1,17 +1,27 @@
-# Redis 音频流
+# :satellite: Redis 音频流
 
 Talk2Scene 从两个 Redis Stream 进行实时消费：预转写的 **STT 流** 和原始 **麦克风流**。两者同时可用时，STT 消息优先处理（跳过 Whisper）。
 
-## 双流架构
+## :arrows_counterclockwise: 双流架构
+
+```mermaid
+flowchart LR
+    STT["stream:stt\n预转写文本"] -->|优先| XR[XREADGROUP]
+    MIC["stream:mic\n原始 PCM 音频"] --> XR
+    XR --> W{来源?}
+    W -->|STT| D[直接使用文本]
+    W -->|Mic| WH[滚动窗口\n+ Whisper] --> D
+    D --> SG[场景生成]
+```
 
 | 流 | Key | 内容 | 处理方式 |
 |----|-----|------|----------|
-| STT | `stream:stt` | 外部 STT 服务预转写的文本 | 跳过 Whisper，直接使用文本 |
-| Mic | `stream:mic` | 原始 PCM 音频字节 | 滚动窗口 + Whisper 转写 |
+| :speech_balloon: STT | `stream:stt` | 外部 STT 服务预转写的文本 | 跳过 Whisper，直接使用文本 |
+| :studio_microphone: Mic | `stream:mic` | 原始 PCM 音频字节 | 滚动窗口 + Whisper 转写 |
 
 两个流在单次 `XREADGROUP` 调用中读取。STT 流排在前面，因此同一批次中 STT 消息先于麦克风消息被处理。
 
-## 流格式
+## :page_facing_up: 流格式
 
 ### stream:stt
 
@@ -39,7 +49,7 @@ Talk2Scene 从两个 Redis Stream 进行实时消费：预转写的 **STT 流** 
 | `format` | string | `"int16"` |
 | `timestamp` | float | Unix 时间戳 |
 
-## 发布示例
+## :outbox_tray: 发布示例
 
 ```python
 import redis, time, json
@@ -59,7 +69,7 @@ r.xadd("stream:stt", {
 r.xadd("stream:mic", {"audio": audio_bytes})
 ```
 
-## 消费者组
+## :busts_in_silhouette: 消费者组
 
 Talk2Scene 在 **两个** 流上创建消费者组：
 
@@ -67,11 +77,11 @@ Talk2Scene 在 **两个** 流上创建消费者组：
 - 处理完成后确认消息
 - 通过 `backpressure_max` 进行背压控制（使用 `XPENDING` 检查两个流）
 
-## 滚动窗口
+## :timer_clock: 滚动窗口
 
 处理麦克风音频时，转写使用滚动窗口（默认 30 秒）在块之间保持上下文。STT 消息完全跳过此步骤，因为文本已经过转写。
 
-## 配置
+## :wrench: 配置
 
 ```yaml
 # conf/stream/default.yaml

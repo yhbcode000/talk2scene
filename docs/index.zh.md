@@ -1,26 +1,29 @@
-# Talk2Scene
+# :microphone: Talk2Scene
 
 Talk2Scene 将音频对话转换为场景事件流 (JSONL)，可在浏览器中实时或回放模式下进行动画展示。
 
-## 主要特点
+## :star: 主要特点
 
-- **场景优先架构**：场景可组合、可测试，可渲染为静态 PNG 或在前端动画展示
-- **JSONL 流式输出**：主要输出格式，支持派生 JSON 和 CSV 导出
-- **严格白名单**：STA/EXP/ACT/BG/CG 代码通过白名单验证
-- **确定性渲染**：场景合成是确定性的，用于评估
-- **双语文档**：英文和中文文档
+- :jigsaw: **场景优先架构**：场景可组合、可测试，可渲染为静态 PNG 或在前端动画展示
+- :page_facing_up: **JSONL 流式输出**：主要输出格式，支持派生 JSON 和 CSV 导出
+- :white_check_mark: **严格白名单**：STA/EXP/ACT/BG/CG 代码通过白名单验证
+- :lock: **确定性渲染**：场景合成是确定性的，用于评估
+- :globe_with_meridians: **双语文档**：英文和中文文档
 
-## 处理流程
+## :gear: 处理流程
 
+```mermaid
+flowchart LR
+    A[音频] --> B[语音转写\nWhisper]
+    T[文本 JSONL] --> C
+    B --> C[场景生成\nLLM]
+    C --> D[JSONL 事件流]
+    D --> E[浏览器动画]
+    D --> F[静态 PNG 渲染]
+    D --> G[评估]
 ```
-音频 → 语音转写 (Whisper) → 场景生成 (LLM) → JSONL 事件流
-文本 JSONL ─────────────────↗                      ↓
-                                  浏览器动画 ← 素材加载
-                                  静态 PNG 渲染 ← 场景合成
-                                  评估 ← 标准 PNG 比对
-```
 
-## 快速开始
+## :rocket: 快速开始
 
 ```bash
 # 安装

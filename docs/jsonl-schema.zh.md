@@ -1,10 +1,10 @@
-# JSONL 格式规范
+# :page_facing_up: JSONL 格式规范
 
 JSONL 是主要输出格式。每行是一个 JSON 对象。
 
-## 事件类型
+## :bookmark_tabs: 事件类型
 
-### 场景事件
+### :clapper: 场景事件
 ```json
 {
     "type": "scene",
@@ -21,7 +21,7 @@ JSONL 是主要输出格式。每行是一个 JSON 对象。
 }
 ```
 
-### 过渡事件
+### :arrows_counterclockwise: 过渡事件
 ```json
 {
     "type": "transition",
@@ -32,7 +32,7 @@ JSONL 是主要输出格式。每行是一个 JSON 对象。
 }
 ```
 
-## 派生格式
+## :card_file_box: 派生格式
 
-- **timeline.json**: 所有事件的 JSON 快照
-- **timeline.csv**: 仅场景事件的 CSV 导出
+- :clipboard: **timeline.json**: 所有事件的 JSON 快照
+- :bar_chart: **timeline.csv**: 仅场景事件的 CSV 导出

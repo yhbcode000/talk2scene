@@ -1,10 +1,10 @@
-# JSONL Schema
+# :page_facing_up: JSONL Schema
 
 JSONL is the primary output format. Each line is a JSON object.
 
-## Event Types
+## :bookmark_tabs: Event Types
 
-### Scene Event
+### :clapper: Scene Event
 ```json
 {
     "type": "scene",
@@ -21,7 +21,7 @@ JSONL is the primary output format. Each line is a JSON object.
 }
 ```
 
-### Transition Event
+### :arrows_counterclockwise: Transition Event
 ```json
 {
     "type": "transition",
@@ -40,7 +40,7 @@ JSONL is the primary output format. Each line is a JSON object.
 }
 ```
 
-### Transcript Event
+### :studio_microphone: Transcript Event
 ```json
 {
     "type": "transcript",
@@ -51,7 +51,7 @@ JSONL is the primary output format. Each line is a JSON object.
 }
 ```
 
-## Derived Formats
+## :card_file_box: Derived Formats
 
-- **timeline.json**: Snapshot of all events as a JSON array
-- **timeline.csv**: CSV export of scene events only
+- :clipboard: **timeline.json**: Snapshot of all events as a JSON array
+- :bar_chart: **timeline.csv**: CSV export of scene events only
