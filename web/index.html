@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk2Scene Viewer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            padding: 1rem 2rem;
+            text-align: center;
+            width: 100%;
+            background: #16213e;
+            border-bottom: 2px solid #0f3460;
+        }
+        header h1 { font-size: 1.5rem; color: #e94560; }
+        .controls {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .controls button {
+            padding: 0.5rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-primary { background: #e94560; color: #fff; }
+        .btn-primary:hover { background: #c73650; }
+        .btn-secondary { background: #0f3460; color: #eee; }
+        .btn-secondary:hover { background: #1a4a80; }
+        .controls input[type="file"] { color: #aaa; }
+        .controls label { font-size: 0.85rem; color: #aaa; }
+        .controls input[type="range"] { width: 120px; }
+        #scene-container {
+            position: relative;
+            width: 1024px;
+            height: 1024px;
+            max-width: 90vw;
+            max-height: 70vh;
+            background: #000;
+            border: 2px solid #0f3460;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        #scene-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.2s ease;
+        }
+        .layer-bg { z-index: 1; }
+        .layer-sta { z-index: 2; }
+        .layer-act { z-index: 3; }
+        .layer-exp { z-index: 4; }
+        .layer-cg { z-index: 5; }
+        #subtitle {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            max-width: 80%;
+            text-align: center;
+            pointer-events: none;
+        }
+        .timeline {
+            width: 100%;
+            max-width: 1024px;
+            margin: 1rem 0;
+            padding: 0 1rem;
+        }
+        .timeline input[type="range"] {
+            width: 100%;
+            accent-color: #e94560;
+        }
+        .info-panel {
+            display: flex;
+            gap: 2rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        .info-panel span { font-family: monospace; }
+        #event-log {
+            max-width: 1024px;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            margin: 1rem;
+            padding: 0.5rem;
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: #7ee787;
+        }
+        .event-entry { padding: 2px 0; border-bottom: 1px solid #21262d; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Talk2Scene Viewer</h1>
+    </header>
+
+    <div class="controls">
+        <input type="file" id="jsonl-input" accept=".jsonl,.json">
+        <button class="btn-primary" id="btn-replay">Replay</button>
+        <button class="btn-secondary" id="btn-realtime">Realtime</button>
+        <button class="btn-secondary" id="btn-pause">Pause</button>
+        <button class="btn-secondary" id="btn-stop">Stop</button>
+        <label>Speed: <input type="range" id="speed" min="0.25" max="4" step="0.25" value="1"> <span id="speed-val">1x</span></label>
+        <label>Assets: <input type="text" id="asset-base" value="assets" size="10"></label>
+        <input type="file" id="audio-input" accept=".wav,.mp3,.ogg">
+    </div>
+
+    <div id="scene-container">
+        <img id="layer-bg" class="layer-bg" alt="BG">
+        <img id="layer-sta" class="layer-sta" alt="STA">
+        <img id="layer-act" class="layer-act" alt="ACT">
+        <img id="layer-exp" class="layer-exp" alt="EXP">
+        <img id="layer-cg" class="layer-cg" alt="CG">
+        <div id="subtitle"></div>
+    </div>
+
+    <div class="timeline">
+        <input type="range" id="timeline-slider" min="0" max="100" value="0">
+    </div>
+
+    <div class="info-panel">
+        <span>Event: <span id="info-event">0/0</span></span>
+        <span>Time: <span id="info-time">0.0s</span></span>
+        <span>Mode: <span id="info-mode">idle</span></span>
+        <span>Speaker: <span id="info-speaker">-</span></span>
+    </div>
+
+    <div id="event-log"></div>
+
+    <audio id="audio-player" style="display:none"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>

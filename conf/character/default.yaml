@@ -1,0 +1,13 @@
+characters:
+  default:
+    name: "AI研究员"
+    age: 20
+    personality: ENFJ
+    defaults:
+      sta: STA_Stand_Front
+      exp: EXP_Neutral
+      bg: BG_Lab_Modern
+    transition:
+      hold_frames: 3
+      cooldown_ms: 500
+      fade_ms: 200

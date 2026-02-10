@@ -1,0 +1,17 @@
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+  stream_key: "stream:mic"
+  stt_stream_key: "stream:stt"
+  consumer_group: "talk2scene"
+  consumer_name: "worker-1"
+  block_ms: 1000
+  batch_size: 10
+  backpressure_max: 100
+
+audio:
+  chunk_duration_ms: 3000
+  sample_rate: 16000
+  channels: 1
+  rolling_window_s: 30

@@ -1,0 +1,56 @@
+site_name: Talk2Scene
+site_description: Convert audio dialogue into animated scene events
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - CLI Usage: cli-usage.md
+  - Configuration: configuration.md
+  - Redis Streaming: redis-streaming.md
+  - JSONL Schema: jsonl-schema.md
+  - Frontend: frontend.md
+  - Assets: assets.md
+  - Scene Renderer: renderer.md
+  - Evaluation: evaluation.md
+  - Whitelist: whitelist.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true

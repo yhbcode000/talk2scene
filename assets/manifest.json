@@ -1,0 +1,225 @@
+{
+  "canvas_size": [
+    1024,
+    1024
+  ],
+  "anchors": {
+    "STA": "bottom-right",
+    "EXP": "bottom-right",
+    "ACT": "bottom-right",
+    "BG": "top-left",
+    "CG": "top-left"
+  },
+  "assets": {
+    "STA": {
+      "STA_Stand_Front": {
+        "path": "assets/sta/STA_Stand_Front.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "STA_Stand_Side": {
+        "path": "assets/sta/STA_Stand_Side.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "STA_Stand_Lean": {
+        "path": "assets/sta/STA_Stand_Lean.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      }
+    },
+    "EXP": {
+      "EXP_Neutral": {
+        "path": "assets/exp/EXP_Neutral.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "EXP_Thinking": {
+        "path": "assets/exp/EXP_Thinking.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "EXP_Astonished": {
+        "path": "assets/exp/EXP_Astonished.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "EXP_Concerned": {
+        "path": "assets/exp/EXP_Concerned.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "EXP_Laugh": {
+        "path": "assets/exp/EXP_Laugh.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "EXP_Smile_EyesClosed": {
+        "path": "assets/exp/EXP_Smile_EyesClosed.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "EXP_PretendClueless": {
+        "path": "assets/exp/EXP_PretendClueless.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      }
+    },
+    "ACT": {
+      "ACT_None": {
+        "path": "assets/act/ACT_None.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_ArmsCrossed": {
+        "path": "assets/act/ACT_ArmsCrossed.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_PalmOpen": {
+        "path": "assets/act/ACT_PalmOpen.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_GlassesPush": {
+        "path": "assets/act/ACT_GlassesPush.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_HandOnHip": {
+        "path": "assets/act/ACT_HandOnHip.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_HeadTilt": {
+        "path": "assets/act/ACT_HeadTilt.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_MouthCover": {
+        "path": "assets/act/ACT_MouthCover.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_ObjectPresent": {
+        "path": "assets/act/ACT_ObjectPresent.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_WaveGreeting": {
+        "path": "assets/act/ACT_WaveGreeting.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      },
+      "ACT_WaveFarewell": {
+        "path": "assets/act/ACT_WaveFarewell.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "bottom-right"
+      }
+    },
+    "BG": {
+      "BG_Lab_Modern": {
+        "path": "assets/bg/BG_Lab_Modern.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "top-left"
+      },
+      "BG_Garden_Rooftop": {
+        "path": "assets/bg/BG_Garden_Rooftop.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "top-left"
+      },
+      "BG_Cafe_Starbucks": {
+        "path": "assets/bg/BG_Cafe_Starbucks.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "top-left"
+      }
+    },
+    "CG": {
+      "CG_None": {
+        "path": "assets/cg/CG_None.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "top-left"
+      },
+      "CG_PandorasTech": {
+        "path": "assets/cg/CG_PandorasTech.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "anchor": "top-left"
+      }
+    }
+  }
+}

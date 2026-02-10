@@ -1,0 +1,37 @@
+# Whitelist: single source of truth for valid component codes.
+# Based on 视频角色及素材需求文档.md
+
+STA:
+  - STA_Stand_Front    # 正面站立
+  - STA_Stand_Side     # 侧身站立
+  - STA_Stand_Lean     # 倚靠站姿
+
+EXP:
+  - EXP_Neutral          # 基准表情
+  - EXP_Thinking         # 思考
+  - EXP_Astonished       # 惊讶
+  - EXP_Concerned        # 忧虑
+  - EXP_Laugh            # 大笑
+  - EXP_Smile_EyesClosed # 眯眼微笑
+  - EXP_PretendClueless  # 装傻
+
+ACT:
+  - ACT_None             # 无动作
+  - ACT_ArmsCrossed      # 抱臂
+  - ACT_PalmOpen         # 掌心示意
+  - ACT_GlassesPush      # 扶眼镜
+  - ACT_HandOnHip        # 叉腰
+  - ACT_HeadTilt         # 头部倾斜
+  - ACT_MouthCover       # 轻掩嘴
+  - ACT_ObjectPresent    # 物件展示
+  - ACT_WaveGreeting     # 挥手招呼
+  - ACT_WaveFarewell     # 挥手告别
+
+BG:
+  - BG_Lab_Modern        # 现代实验室
+  - BG_Garden_Rooftop    # 天台花园
+  - BG_Cafe_Starbucks    # 屋顶咖啡馆·星巴克风
+
+CG:
+  - CG_None              # 无CG插画（使用正常图层合成）
+  - CG_PandorasTech      # 科技潘多拉（全屏插画，替代正常图层）

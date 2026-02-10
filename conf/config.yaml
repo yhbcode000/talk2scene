@@ -1,0 +1,25 @@
+defaults:
+  - model: default
+  - stream: default
+  - render: default
+  - assets: default
+  - character: default
+  - io: default
+  - _self_
+
+session_id: null
+mode: batch  # batch | stream | render | eval
+
+eval:
+  run: false
+  tolerance: 5
+  cases_dir: evaluation/cases
+  expected_dir: evaluation/expected
+  output_dir: evaluation/output
+  diffs_dir: evaluation/diffs
+
+render:
+  scene: false
+  scene_file: null
+
+log_level: INFO

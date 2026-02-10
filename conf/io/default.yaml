@@ -1,0 +1,16 @@
+input:
+  audio_dir: input
+  text_file: null   # Path to transcript JSONL for text mode
+  supported_formats: [wav, mp3, flac, ogg]
+
+output:
+  base_dir: output
+  formats:
+    jsonl: true
+    json: true
+    csv: true
+    wav: false
+  flush_interval_s: 1.0
+
+sessions:
+  registry_path: output/sessions.jsonl

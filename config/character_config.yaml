@@ -3,9 +3,9 @@ character:
   age: 20
   personality: ENFJ
   default_components:
-    sta: STA_Stand_Default
+    sta: STA_Stand_Front
     exp: EXP_Neutral
-    bg: BG_Lab
+    bg: BG_Lab_Modern
 
 paths:
   sta_dir: "assets/sta"

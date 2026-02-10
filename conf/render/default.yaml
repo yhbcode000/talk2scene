@@ -1,0 +1,16 @@
+canvas:
+  width: 1024
+  height: 1024
+
+output_format: PNG
+quality: 95
+deterministic: true
+scene_on_event: false
+
+video:
+  fps: 30
+  crf: 18
+  format: webm    # webm, mp4, or avi
+  subtitle: true
+  subtitle_font_size: 32
+  preview: true   # open video after rendering

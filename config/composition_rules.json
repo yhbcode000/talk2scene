@@ -1,10 +1,9 @@
 {
-    "incompatible_combinations": {
-      "STA_ArmsCrossed": ["ACT_DrinkCoffee"],
-      "EXP_TearyEyes": ["STA_Stand_Power"]
-    },
+    "layer_order": ["BG", "STA", "ACT", "EXP"],
+    "cg_mode": "CG replaces all normal layers when active (full-scene illustration)",
+    "incompatible_combinations": {},
     "recommended_pairs": {
-      "ACT_SlamTable": ["EXP_Surprised"],
-      "STA_Sit_Lazy": ["EXP_Smirk"]
+      "ACT_HeadTilt": ["EXP_Thinking"],
+      "ACT_MouthCover": ["EXP_Laugh"]
     }
   }

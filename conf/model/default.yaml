@@ -1,0 +1,10 @@
+whisper:
+  model_size: base
+  language: null
+  device: cpu
+
+llm:
+  provider: openai
+  model: gpt-4o
+  temperature: 0.3
+  max_tokens: 4096

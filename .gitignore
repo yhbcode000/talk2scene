@@ -169,5 +169,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-output
-logs
+
+# ── Talk2Scene project ──────────────────────────────
+output/
+logs/
+evaluation/output/
+evaluation/diffs/
+
+# MkDocs build
+site/
+
+# uv / pyenv
+.python-version

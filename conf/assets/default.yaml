@@ -1,0 +1,24 @@
+canvas_size: [1024, 1024]
+
+anchors:
+  character_origin: center-bottom
+  bg_origin: top-left
+  cg_origin: top-left  # CG is full-scene, same as BG
+
+# Normal layer order: BG -> STA -> ACT -> EXP
+# CG replaces all layers when active (full-scene illustration)
+z_order:
+  - BG
+  - STA
+  - ACT
+  - EXP
+
+asset_dirs:
+  sta: assets/sta
+  exp: assets/exp
+  act: assets/act
+  bg: assets/bg
+  cg: assets/cg
+
+whitelist_path: conf/whitelist.yaml
+manifest_path: assets/manifest.json
