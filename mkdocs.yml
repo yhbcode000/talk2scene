@@ -21,17 +21,17 @@ plugins:
           build: true
 
 nav:
-  - ":microphone: Home": index.md
-  - ":wrench: Installation": installation.md
-  - ":keyboard: CLI Usage": cli-usage.md
-  - ":gear: Configuration": configuration.md
-  - ":satellite: Redis Streaming": redis-streaming.md
-  - ":page_facing_up: JSONL Schema": jsonl-schema.md
-  - ":desktop_computer: Frontend": frontend.md
-  - ":art: Assets": assets.md
-  - ":framed_picture: Scene Renderer": renderer.md
-  - ":test_tube: Evaluation": evaluation.md
-  - ":clipboard: Whitelist": whitelist.md
+  - "🎤 Home": index.md
+  - "🔧 Installation": installation.md
+  - "⌨️ CLI Usage": cli-usage.md
+  - "⚙️ Configuration": configuration.md
+  - "📡 Redis Streaming": redis-streaming.md
+  - "📄 JSONL Schema": jsonl-schema.md
+  - "🖥️ Frontend": frontend.md
+  - "🎨 Assets": assets.md
+  - "🖼️ Scene Renderer": renderer.md
+  - "🧪 Evaluation": evaluation.md
+  - "📋 Whitelist": whitelist.md
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -43,11 +43,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-      options:
-        image_path: https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/
   - admonition
   - toc:
       permalink: true

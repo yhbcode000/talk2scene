@@ -1,16 +1,16 @@
-# :microphone: Talk2Scene
+# 🎤 Talk2Scene
 
 Talk2Scene converts audio dialogue into a stream of scene events (JSONL) that can be animated in a browser in realtime or replay mode.
 
-## :star: Key Features
+## ⭐ Key Features
 
-- :jigsaw: **Scene-first architecture**: Scenes are composable, testable, and renderable as static PNGs or animated in the frontend
-- :page_facing_up: **JSONL streaming**: Primary output format with derived JSON and CSV exports
-- :white_check_mark: **Strict whitelist**: STA/EXP/ACT/BG/CG codes validated against whitelist
-- :lock: **Deterministic rendering**: Scene composition is deterministic for evaluation
-- :globe_with_meridians: **Bilingual docs**: English and Chinese documentation
+- 🧩 **Scene-first architecture**: Scenes are composable, testable, and renderable as static PNGs or animated in the frontend
+- 📄 **JSONL streaming**: Primary output format with derived JSON and CSV exports
+- ✅ **Strict whitelist**: STA/EXP/ACT/BG/CG codes validated against whitelist
+- 🔒 **Deterministic rendering**: Scene composition is deterministic for evaluation
+- 🌐 **Bilingual docs**: English and Chinese documentation
 
-## :gear: Pipeline
+## ⚙️ Pipeline
 
 ```mermaid
 flowchart LR
@@ -23,7 +23,7 @@ flowchart LR
     D --> G[Evaluation]
 ```
 
-## :rocket: Quick Start
+## 🚀 Quick Start
 
 ```bash
 # Install

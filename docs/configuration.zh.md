@@ -1,19 +1,19 @@
-# :gear: 配置说明
+# ⚙️ 配置说明
 
 Talk2Scene 使用 [Hydra](https://hydra.cc/) 进行分层配置。
 
-## :file_folder: 配置组
+## 📁 配置组
 
 | 组 | 文件 | 说明 |
 |---|------|------|
-| :brain: model | `conf/model/default.yaml` | Whisper 和 LLM 设置 |
-| :satellite: stream | `conf/stream/default.yaml` | Redis 流设置 |
-| :framed_picture: render | `conf/render/default.yaml` | 画布、渲染和视频设置 |
-| :art: assets | `conf/assets/default.yaml` | 素材路径和层级 |
-| :bust_in_silhouette: character | `conf/character/default.yaml` | 角色默认值和过渡 |
-| :open_file_folder: io | `conf/io/default.yaml` | 输入/输出路径和格式 |
+| 🧠 model | `conf/model/default.yaml` | Whisper 和 LLM 设置 |
+| 📡 stream | `conf/stream/default.yaml` | Redis 流设置 |
+| 🖼️ render | `conf/render/default.yaml` | 画布、渲染和视频设置 |
+| 🎨 assets | `conf/assets/default.yaml` | 素材路径和层级 |
+| 👤 character | `conf/character/default.yaml` | 角色默认值和过渡 |
+| 📂 io | `conf/io/default.yaml` | 输入/输出路径和格式 |
 
-## :robot: LLM 设置
+## 🤖 LLM 设置
 
 默认模型为 `gpt-4o`，启用 JSON 模式（`response_format: json_object`），保证场景生成器输出有效 JSON。
 
@@ -28,7 +28,7 @@ Talk2Scene 使用 [Hydra](https://hydra.cc/) 进行分层配置。
 uv run talk2scene mode=text io.input.text_file=input/transcript.jsonl model.llm.model=gpt-4o-mini
 ```
 
-## :satellite: 流设置
+## 📡 流设置
 
 | 设置 | 默认值 | 说明 |
 |------|--------|------|
@@ -40,7 +40,7 @@ uv run talk2scene mode=text io.input.text_file=input/transcript.jsonl model.llm.
 | `stream.redis.batch_size` | `10` | 每次读取最大消息数 |
 | `stream.redis.backpressure_max` | `100` | 暂停前最大待处理消息数 |
 
-## :framed_picture: 渲染设置
+## 🖼️ 渲染设置
 
 | 设置 | 默认值 | 说明 |
 |------|--------|------|
@@ -54,12 +54,12 @@ uv run talk2scene mode=text io.input.text_file=input/transcript.jsonl model.llm.
 | `render.video.subtitle_font_size` | `32` | 字幕字号（像素） |
 | `render.video.preview` | `true` | 渲染后打开视频 |
 
-## :keyboard: 命令行覆盖
+## ⌨️ 命令行覆盖
 
 ```bash
 uv run talk2scene model.whisper.model_size=medium stream.redis.host=myhost
 ```
 
-## :key: 环境变量
+## 🔑 环境变量
 
 - `OPENAI_API_KEY`：LLM 场景生成必需

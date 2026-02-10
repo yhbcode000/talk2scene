@@ -1,8 +1,8 @@
-# :framed_picture: 场景渲染器
+# 🖼️ 场景渲染器
 
 场景渲染器将素材图层确定性地合成为单个 PNG。
 
-## :layer_cake: 图层顺序
+## 🍰 图层顺序
 
 普通模式（`CG_None`）：图层自底向上合成：
 
@@ -18,7 +18,7 @@ flowchart LR
     CG["CG（替换所有图层）"]
 ```
 
-## :electric_plug: API
+## 🔌 API
 
 ```python
 from talk2scene.renderer import render_scene
@@ -35,17 +35,17 @@ image = render_scene(scene_state, asset_dirs, canvas_size=(1024, 1024))
 image.save("output.png")
 ```
 
-## :keyboard: 命令行
+## ⌨️ 命令行
 
 ```bash
 uv run talk2scene render.scene=true render.scene_file=scene.json
 ```
 
-## :clapper: 视频渲染
+## 🎬 视频渲染
 
 视频模式将场景事件渲染为视频文件，支持可选的字幕烧录。
 
-### :zap: 并行渲染
+### ⚡ 并行渲染
 
 视频管线不再逐帧渲染（例如 25 秒视频在 30fps 下需要渲染 750 帧），而是使用 `multiprocessing.Pool` 并行渲染每个场景仅一张图片，再通过 ffmpeg 的 **concat 分离器** 按场景时长拼接最终视频。由于独立场景图片数量通常远少于总帧数，速度显著提升。
 
@@ -63,7 +63,7 @@ uv run talk2scene mode=video session_id=my_session render.video.subtitle=false
 uv run talk2scene mode=video session_id=my_session render.video.preview=false
 ```
 
-### :gear: 视频配置
+### ⚙️ 视频配置
 
 | 设置 | 默认值 | 说明 |
 |------|--------|------|
@@ -74,7 +74,7 @@ uv run talk2scene mode=video session_id=my_session render.video.preview=false
 | `render.video.subtitle_font_size` | `32` | 字幕字号（像素） |
 | `render.video.preview` | `true` | 渲染后打开视频（`xdg-open`） |
 
-## :tv: 实时封面渲染
+## 📺 实时封面渲染
 
 在流式模式下，Talk2Scene 可在每批场景事件后将当前场景渲染为 `front_page.png`。启用方式：
 
@@ -85,6 +85,6 @@ render:
 
 适用于在 Web 前端或仪表盘中显示实时预览。
 
-## :lock: 确定性
+## 🔒 确定性
 
 渲染是确定性的：相同输入始终产生相同的 PNG 输出。这对评估框架至关重要。

@@ -1,8 +1,8 @@
-# :test_tube: Evaluation Framework
+# 🧪 Evaluation Framework
 
 The evaluation framework is **separate from unit tests**. It performs visual regression testing by rendering scenes and comparing with golden PNGs.
 
-## :file_folder: Structure
+## 📁 Structure
 
 ```
 evaluation/
@@ -12,13 +12,13 @@ evaluation/
 └── diffs/      # Diff images on failure
 ```
 
-## :rocket: Running Evaluation
+## 🚀 Running Evaluation
 
 ```bash
 uv run talk2scene eval.run=true
 ```
 
-## :mag: How It Works
+## 🔍 How It Works
 
 ```mermaid
 flowchart TD
@@ -30,16 +30,16 @@ flowchart TD
     E --> F
 ```
 
-## :straight_ruler: Comparison Methods
+## 📏 Comparison Methods
 
-- :eye: **Pixel diff**: Percentage of differing pixels (configurable tolerance)
-- :hash: **Perceptual hash**: Hamming distance between image hashes
+- 👁️ **Pixel diff**: Percentage of differing pixels (configurable tolerance)
+- #️⃣ **Perceptual hash**: Hamming distance between image hashes
 
-## :vs: Tests vs Evaluation
+## 🆚 Tests vs Evaluation
 
 | | tests/ | evaluation/ |
 |---|--------|-------------|
-| :label: Type | Unit tests | Visual regression |
-| :hammer_and_wrench: Tool | pytest | Built-in runner |
-| :white_check_mark: Checks | Logic correctness | Render correctness |
-| :package: Artifacts | - | PNG renders + diffs |
+| 🏷️ Type | Unit tests | Visual regression |
+| 🛠️ Tool | pytest | Built-in runner |
+| ✅ Checks | Logic correctness | Render correctness |
+| 📦 Artifacts | - | PNG renders + diffs |

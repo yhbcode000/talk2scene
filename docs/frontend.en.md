@@ -1,16 +1,16 @@
-# :desktop_computer: Browser Frontend
+# 🖥️ Browser Frontend
 
 The frontend loads JSONL events and animates scene layers in the browser.
 
-## :play_or_pause_button: Modes
+## ⏯️ Modes
 
-### :rewind: Replay Mode
+### ⏪ Replay Mode
 Plays events from the beginning with timing based on timestamps.
 
-### :satellite: Realtime Mode
+### 📡 Realtime Mode
 Shows the latest event, polling for new events.
 
-## :layer_cake: Layering Order
+## 🍰 Layering Order
 
 ### Normal mode (`CG_None`)
 
@@ -31,17 +31,17 @@ block-beta
     CG["CG — Full-scene illustration\n(replaces BG, STA, ACT, EXP)"]
 ```
 
-## :arrow_forward: Usage
+## ▶️ Usage
 
-1. :globe_with_meridians: Open `web/index.html` in a browser
-2. :open_file_folder: Load a `.jsonl` file
-3. :file_folder: Set the asset base path
-4. :play_or_pause_button: Click **Replay** or **Realtime**
-5. :headphones: Optionally load a WAV file for audio sync
+1. 🌐 Open `web/index.html` in a browser
+2. 📂 Load a `.jsonl` file
+3. 📁 Set the asset base path
+4. ⏯️ Click **Replay** or **Realtime**
+5. 🎧 Optionally load a WAV file for audio sync
 
-## :sparkles: Features
+## ✨ Features
 
-- :fast_forward: Speed control (0.25x - 4x)
-- :control_knobs: Timeline scrubbing
-- :scroll: Event log
-- :headphones: Audio sync support
+- ⏩ Speed control (0.25x - 4x)
+- 🎛️ Timeline scrubbing
+- 📜 Event log
+- 🎧 Audio sync support

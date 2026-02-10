@@ -1,14 +1,14 @@
-# :wrench: 安装指南
+# 🔧 安装指南
 
-## :clipboard: 前置要求
+## 📋 前置要求
 
-- :snake: Python 3.11+
-- :package: [uv](https://docs.astral.sh/uv/) 包管理器
-- :film_projector: FFmpeg（音频处理）
-- :satellite: Redis（流式模式）
-- :globe_with_meridians: Node.js（可选，前端开发）
+- 🐍 Python 3.11+
+- 📦 [uv](https://docs.astral.sh/uv/) 包管理器
+- 📽️ FFmpeg（音频处理）
+- 📡 Redis（流式模式）
+- 🌐 Node.js（可选，前端开发）
 
-## :inbox_tray: 使用 uv 安装
+## 📥 使用 uv 安装
 
 ```bash
 # 克隆仓库
@@ -25,7 +25,7 @@ uv sync --extra dev
 uv sync --extra docs
 ```
 
-## :satellite: Redis 配置
+## 📡 Redis 配置
 
 ```bash
 # 安装 Redis
@@ -38,7 +38,7 @@ sudo systemctl start redis
 redis-cli ping
 ```
 
-## :film_projector: FFmpeg 配置
+## 📽️ FFmpeg 配置
 
 ```bash
 # Ubuntu/Debian
@@ -48,7 +48,7 @@ sudo apt install ffmpeg
 ffmpeg -version
 ```
 
-## :white_check_mark: 验证安装
+## ✅ 验证安装
 
 ```bash
 uv run talk2scene --help

@@ -1,6 +1,6 @@
-# :art: Assets & Placeholder Generator
+# 🎨 Assets & Placeholder Generator
 
-## :file_folder: Asset Structure
+## 📁 Asset Structure
 
 ```
 assets/
@@ -12,11 +12,11 @@ assets/
 └── manifest.json
 ```
 
-## :triangular_ruler: Canvas Size
+## 📐 Canvas Size
 
 All assets share the same canvas size (default: 1024x1024) with consistent alignment anchors.
 
-## :hammer_and_wrench: Placeholder Generator
+## 🛠️ Placeholder Generator
 
 Generate debug placeholder assets:
 
@@ -24,15 +24,15 @@ Generate debug placeholder assets:
 uv run talk2scene mode=generate-assets
 ```
 
-:sparkles: Features:
+✨ Features:
 
-- :white_large_square: Transparent PNGs for STA/EXP/ACT
-- :black_large_square: Opaque PNGs for BG and CG
-- :label: Visual debug labels with code text
-- :rainbow: Color-coded by category
-- :arrows_counterclockwise: Idempotent (use `--force` to regenerate)
-- :page_facing_up: Writes asset manifest
+- ⬜ Transparent PNGs for STA/EXP/ACT
+- ⬛ Opaque PNGs for BG and CG
+- 🏷️ Visual debug labels with code text
+- 🌈 Color-coded by category
+- 🔄 Idempotent (use `--force` to regenerate)
+- 📄 Writes asset manifest
 
-## :card_index: Manifest
+## 📇 Manifest
 
 `assets/manifest.json` contains paths, sizes, and anchor info for all generated assets.
