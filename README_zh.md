@@ -24,25 +24,61 @@ Talk2Scene 是一个**音频驱动的智能动画生成工具**，能够自动�
 
 ## 🏗️ 架构
 
-```
-音频 / 文本
-      │
-  语音转录（Whisper / OpenAI API）
-      │
-  场景生成（LLM）
-      │
-  JSONL 事件 ──➤ 浏览器查看器（web/）
-      │               静态 PNG 渲染
-      │               视频导出（ffmpeg）
-      ▼
-  会话输出
+```mermaid
+flowchart LR
+    A[音频] --> B[语音转录\nWhisper / OpenAI API]
+    T[文本 JSONL] --> C
+    B --> C[场景生成\nLLM]
+    C --> D[JSONL 事件]
+    D --> E[浏览器查看器]
+    D --> F[静态 PNG 渲染]
+    D --> G[视频导出\nffmpeg]
 ```
 
 场景由**五种图层类型**自底向上堆叠：
 
-> **BG** → **STA** → **ACT** → **EXP**
->
+```mermaid
+flowchart LR
+    BG --> STA --> ACT --> EXP
+```
+
 > **CG** 插画激活时会替换整个分层场景。
+
+## 🖼️ 示例输出
+
+### 示例视频
+
+<p align="center">
+  <video src="https://github.com/yhbcode000/talk2scene/raw/main/evaluation/expected/example_video.webm" width="600" controls>
+    您的浏览器不支持视频标签。
+  </video>
+</p>
+
+> 如果视频无法内联播放，[点此下载](evaluation/expected/example_video.webm)。
+
+### 渲染场景
+
+<p align="center">
+  <img src="evaluation/expected/basic_scene.png" width="280" alt="基础场景 — 实验室 + 正面站立 + 中性表情">
+  <img src="evaluation/expected/cafe_thinking.png" width="280" alt="咖啡厅场景 — 咖啡厅 + 正面站立 + 思考">
+  <img src="evaluation/expected/cg_pandora.png" width="280" alt="CG 模式 — 潘多拉科技">
+</p>
+
+<p align="center">
+  <em>左：基础场景（实验室 + 正面站立 + 中性表情） · 中：咖啡厅场景（咖啡厅 + 正面站立 + 思考） · 右：CG 模式（潘多拉科技）</em>
+</p>
+
+### 素材图层
+
+每个场景由透明素材图层叠加在背景上合成。以下是每个类别的一个示例：
+
+| 图层 | 示例 | 编码 | 说明 |
+|:----:|:----:|------|------|
+| 🌅 **BG** | <img src="assets/bg/BG_Lab_Modern.png" width="120"> | `BG_Lab_Modern` | 背景（不透明） |
+| 🧍 **STA** | <img src="assets/sta/STA_Stand_Front.png" width="120"> | `STA_Stand_Front` | 姿态（透明） |
+| 🎭 **EXP** | <img src="assets/exp/EXP_Smile_EyesClosed.png" width="120"> | `EXP_Smile_EyesClosed` | 表情叠加（透明） |
+| 🤚 **ACT** | <img src="assets/act/ACT_WaveGreeting.png" width="120"> | `ACT_WaveGreeting` | 动作叠加（透明） |
+| ✨ **CG** | <img src="assets/cg/CG_PandorasTech.png" width="120"> | `CG_PandorasTech` | 全场景插画（替换所有图层） |
 
 ## 📦 安装
 
@@ -99,24 +135,7 @@ uv run talk2scene mode=stream
 
 ## 📚 文档
 
-完整文档位于 `docs/`（中文 & English）。本地启动：
-
-```bash
-uv sync --extra docs && uv run mkdocs serve
-```
-
-| | 主题 | 说明 |
-|---|------|------|
-| 🔧 | 安装指南 | 环境要求与配置 |
-| ⌨️ | CLI 使用 | 所有模式与参数覆盖 |
-| ⚙️ | 配置说明 | Hydra 配置组 |
-| 📡 | Redis 流式 | 实时双流设置 |
-| 📄 | JSONL 格式 | 事件类型与数据结构 |
-| 🖥️ | 前端查看器 | 浏览器播放与交互 |
-| 🎨 | 素材资源 | 图层素材与占位生成器 |
-| 🖼️ | 场景渲染 | 合成与渲染 |
-| ✅ | 评测系统 | 视觉回归测试 |
-| 📋 | 白名单 | 有效组件编码 |
+完整文档（中文 & English）请访问 **[discover304.top/talk2scene](https://discover304.top/talk2scene)**。
 
 ## 📬 联系
 

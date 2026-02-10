@@ -44,6 +44,42 @@ flowchart LR
 
 > A **CG** illustration, when active, replaces the entire layered scene.
 
+## 🖼️ Example Output
+
+### Example Video
+
+<p align="center">
+  <video src="https://github.com/yhbcode000/talk2scene/raw/main/evaluation/expected/example_video.webm" width="600" controls>
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+> If the video doesn't play inline, [click here to download](evaluation/expected/example_video.webm).
+
+### Rendered Scenes
+
+<p align="center">
+  <img src="evaluation/expected/basic_scene.png" width="280" alt="Basic Scene — Lab + Stand Front + Neutral">
+  <img src="evaluation/expected/cafe_thinking.png" width="280" alt="Cafe Scene — Cafe + Stand Front + Thinking">
+  <img src="evaluation/expected/cg_pandora.png" width="280" alt="CG Mode — Pandora's Tech">
+</p>
+
+<p align="center">
+  <em>Left: Basic scene (Lab + Stand Front + Neutral) · Center: Cafe scene (Cafe + Stand Front + Thinking) · Right: CG mode (Pandora's Tech)</em>
+</p>
+
+### Asset Layers
+
+Each scene is composed by stacking transparent asset layers on a background. Below is one sample from each category:
+
+| Layer | Sample | Code | Description |
+|:-----:|:------:|------|-------------|
+| 🌅 **BG** | <img src="assets/bg/BG_Lab_Modern.png" width="120"> | `BG_Lab_Modern` | Background (opaque) |
+| 🧍 **STA** | <img src="assets/sta/STA_Stand_Front.png" width="120"> | `STA_Stand_Front` | Stance / pose (transparent) |
+| 🎭 **EXP** | <img src="assets/exp/EXP_Smile_EyesClosed.png" width="120"> | `EXP_Smile_EyesClosed` | Expression overlay (transparent) |
+| 🤚 **ACT** | <img src="assets/act/ACT_WaveGreeting.png" width="120"> | `ACT_WaveGreeting` | Action overlay (transparent) |
+| ✨ **CG** | <img src="assets/cg/CG_PandorasTech.png" width="120"> | `CG_PandorasTech` | Full-scene illustration (replaces all layers) |
+
 ## 📦 Install
 
 > [!IMPORTANT]
