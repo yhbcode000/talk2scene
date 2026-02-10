@@ -84,7 +84,7 @@ When processing mic audio, transcription uses a rolling window (default 30s) to 
 ## 🔧 Configuration
 
 ```yaml
-# conf/stream/default.yaml
+# conf/stream/default.yaml — https://github.com/yhbcode000/talk2scene/blob/main/conf/stream/default.yaml
 redis:
   stream_key: "stream:mic"
   stt_stream_key: "stream:stt"

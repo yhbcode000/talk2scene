@@ -12,6 +12,8 @@ assets/
 └── manifest.json
 ```
 
+> Browse the full asset directory on GitHub: [`assets/`](https://github.com/yhbcode000/talk2scene/tree/main/assets)
+
 ## 📐 Canvas Size
 
 All assets share the same canvas size (default: 1024x1024) with consistent alignment anchors.
@@ -35,4 +37,4 @@ uv run talk2scene mode=generate-assets
 
 ## 📇 Manifest
 
-`assets/manifest.json` contains paths, sizes, and anchor info for all generated assets.
+[`assets/manifest.json`](https://github.com/yhbcode000/talk2scene/blob/main/assets/manifest.json) contains paths, sizes, and anchor info for all generated assets.

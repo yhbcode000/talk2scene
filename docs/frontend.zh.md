@@ -33,7 +33,7 @@ block-beta
 
 ## ▶️ 使用方法
 
-1. 🌐 在浏览器中打开 `web/index.html`
+1. 🌐 在浏览器中打开 [`web/index.html`](https://github.com/yhbcode000/talk2scene/blob/main/web/index.html)
 2. 📂 加载 `.jsonl` 文件
 3. 📁 设置素材基础路径
 4. ⏯️ 点击 **Replay** 或 **Realtime**

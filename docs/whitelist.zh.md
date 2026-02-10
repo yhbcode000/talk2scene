@@ -2,7 +2,7 @@
 
 ## 🛡️ 白名单
 
-`conf/whitelist.yaml` 是有效组件代码的唯一数据源。
+[`conf/whitelist.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/whitelist.yaml) 是有效组件代码的唯一数据源。
 
 ### 📑 类别
 

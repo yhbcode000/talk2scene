@@ -84,7 +84,7 @@ Talk2Scene 在 **两个** 流上创建消费者组：
 ## 🔧 配置
 
 ```yaml
-# conf/stream/default.yaml
+# conf/stream/default.yaml — https://github.com/yhbcode000/talk2scene/blob/main/conf/stream/default.yaml
 redis:
   stream_key: "stream:mic"
   stt_stream_key: "stream:stt"

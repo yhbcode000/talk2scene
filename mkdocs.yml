@@ -1,6 +1,9 @@
 site_name: Talk2Scene
 site_description: Convert audio dialogue into animated scene events
 site_author: Talk2Scene Team
+repo_url: https://github.com/yhbcode000/talk2scene
+repo_name: yhbcode000/talk2scene
+edit_uri: edit/main/docs/
 
 theme:
   name: material

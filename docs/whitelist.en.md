@@ -2,7 +2,7 @@
 
 ## 🛡️ Whitelist
 
-`conf/whitelist.yaml` is the single source of truth for valid component codes.
+[`conf/whitelist.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/whitelist.yaml) is the single source of truth for valid component codes.
 
 ### 📑 Categories
 

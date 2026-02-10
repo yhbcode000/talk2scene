@@ -12,6 +12,8 @@ evaluation/
 └── diffs/      # 失败时的差异图片
 ```
 
+> 在 GitHub 上浏览：[`evaluation/`](https://github.com/yhbcode000/talk2scene/tree/main/evaluation)
+
 ## 🚀 运行评估
 
 ```bash

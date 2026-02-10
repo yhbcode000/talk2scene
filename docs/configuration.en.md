@@ -6,12 +6,12 @@ Talk2Scene uses [Hydra](https://hydra.cc/) for hierarchical configuration.
 
 | Group | File | Description |
 |-------|------|-------------|
-| 🧠 model | `conf/model/default.yaml` | Whisper and LLM settings |
-| 📡 stream | `conf/stream/default.yaml` | Redis stream settings |
-| 🖼️ render | `conf/render/default.yaml` | Canvas, render, and video settings |
-| 🎨 assets | `conf/assets/default.yaml` | Asset paths and z-order |
-| 👤 character | `conf/character/default.yaml` | Character defaults and transitions |
-| 📂 io | `conf/io/default.yaml` | Input/output paths and formats |
+| 🧠 model | [`conf/model/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/model/default.yaml) | Whisper and LLM settings |
+| 📡 stream | [`conf/stream/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/stream/default.yaml) | Redis stream settings |
+| 🖼️ render | [`conf/render/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/render/default.yaml) | Canvas, render, and video settings |
+| 🎨 assets | [`conf/assets/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/assets/default.yaml) | Asset paths and z-order |
+| 👤 character | [`conf/character/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/character/default.yaml) | Character defaults and transitions |
+| 📂 io | [`conf/io/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/io/default.yaml) | Input/output paths and formats |
 
 ## 🤖 LLM Settings
 

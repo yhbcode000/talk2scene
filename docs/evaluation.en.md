@@ -12,6 +12,8 @@ evaluation/
 └── diffs/      # Diff images on failure
 ```
 
+> Browse on GitHub: [`evaluation/`](https://github.com/yhbcode000/talk2scene/tree/main/evaluation)
+
 ## 🚀 Running Evaluation
 
 ```bash

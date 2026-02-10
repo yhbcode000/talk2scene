@@ -6,12 +6,12 @@ Talk2Scene 使用 [Hydra](https://hydra.cc/) 进行分层配置。
 
 | 组 | 文件 | 说明 |
 |---|------|------|
-| 🧠 model | `conf/model/default.yaml` | Whisper 和 LLM 设置 |
-| 📡 stream | `conf/stream/default.yaml` | Redis 流设置 |
-| 🖼️ render | `conf/render/default.yaml` | 画布、渲染和视频设置 |
-| 🎨 assets | `conf/assets/default.yaml` | 素材路径和层级 |
-| 👤 character | `conf/character/default.yaml` | 角色默认值和过渡 |
-| 📂 io | `conf/io/default.yaml` | 输入/输出路径和格式 |
+| 🧠 model | [`conf/model/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/model/default.yaml) | Whisper 和 LLM 设置 |
+| 📡 stream | [`conf/stream/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/stream/default.yaml) | Redis 流设置 |
+| 🖼️ render | [`conf/render/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/render/default.yaml) | 画布、渲染和视频设置 |
+| 🎨 assets | [`conf/assets/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/assets/default.yaml) | 素材路径和层级 |
+| 👤 character | [`conf/character/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/character/default.yaml) | 角色默认值和过渡 |
+| 📂 io | [`conf/io/default.yaml`](https://github.com/yhbcode000/talk2scene/blob/main/conf/io/default.yaml) | 输入/输出路径和格式 |
 
 ## 🤖 LLM 设置
 

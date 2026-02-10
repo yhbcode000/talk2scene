@@ -33,7 +33,7 @@ block-beta
 
 ## ▶️ Usage
 
-1. 🌐 Open `web/index.html` in a browser
+1. 🌐 Open [`web/index.html`](https://github.com/yhbcode000/talk2scene/blob/main/web/index.html) in a browser
 2. 📂 Load a `.jsonl` file
 3. 📁 Set the asset base path
 4. ⏯️ Click **Replay** or **Realtime**
